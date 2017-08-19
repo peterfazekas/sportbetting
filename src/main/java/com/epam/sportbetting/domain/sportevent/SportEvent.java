@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 /**
  * @author Peter_Fazekas on 2017.08.19..
  */
-public class SportEvent {
+public abstract class SportEvent {
 
     private final String title;
     private final LocalDateTime startDate;
@@ -27,5 +27,10 @@ public class SportEvent {
 
     public LocalDateTime getEndDate() {
         return endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "SportEventScenario[" + "title='" + title + '\'' + ", startDate=" + startDate + ", endDate=" + endDate + "]";
     }
 }
